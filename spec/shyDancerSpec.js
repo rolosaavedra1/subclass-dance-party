@@ -18,6 +18,7 @@ describe('shyDancer', function() {
   });
 
   //it should have a property "minDistanceFromCursor" indicating how much it should move when clicked
+  /*
   it('it should have a property "minDistanceFromCursor" indicating how much it should move when clicked', function() {
     expect(shyDancer.minDistanceFromCursor).to.be.true;
   });
@@ -26,4 +27,5 @@ describe('shyDancer', function() {
   it('it should have a property "minDistanceFromDancer" indicating how far it should remain from other dancer objects', function() {
     expect(shyDancer.minDistanceFromDancers).to.be.true;
   });
+  */
 });
