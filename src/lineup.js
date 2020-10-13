@@ -6,8 +6,7 @@ document.querySelector('#lineUp').addEventListener('click', (e) => {
   dancers.forEach((dancer, i) => {
     const middle = $('body').height() / 2;
     const x = (i * gap) + offset;
-    
-    dancer.style.top = middle + 'px';
-    dancer.style.left = x + 'px';
+    dancer.style.top = `${middle}px`;
+    dancer.style.left = `${x}px`;
   });
 });
