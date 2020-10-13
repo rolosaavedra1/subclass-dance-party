@@ -28,6 +28,7 @@ $(document).ready(function() {
         for (var i = 0; i < positions.length; i++) {
           let distance = Math.sqrt(Math.pow(positions[i][0] - dancer.top, 2) + Math.pow(positions[i][1] - dancer.left, 2));
           if (distance < dancer.minDistanceFromDancers) {
+            dancer.feelingOverwhelmed = true;
             dancer.step();
           }
         }

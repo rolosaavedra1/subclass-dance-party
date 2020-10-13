@@ -1,6 +1,7 @@
 var ShyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps, 'shyDancer');
-  this.minDistanceFromDancers = 100;
+  this.minDistanceFromDancers = 250;
+  this.feelingOverwhelmed = false;
   this.step();
 };
 
@@ -17,4 +18,12 @@ ShyDancer.prototype.step = function() {
     // called setPosition to put shy dancer at new random location
     Dancer.prototype.setPosition.call(this, top, left);
   });
+  //if other dancers are too close (see init.js)
+  if (this.feelingOverwhelmed){
+    var top = $('body').height() * Math.random();
+    var left = $('body').width() * Math.random();
+    // called setPosition to put shy dancer at new random location
+    Dancer.prototype.setPosition.call(this, top, left);
+    this.feelingOverwhelmed = false;
+  }
 };
