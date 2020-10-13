@@ -1,5 +1,6 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.prepend('<img id="blinky.gif" src="blinky.gif" />');
   this.step();
 };
 
