@@ -2,8 +2,7 @@ var Dancer = function(top, left, timeBetweenSteps, className = 'dancer') {
   // added className parameter to specify the class for each dancer
   this.$node = $(`<span class="${className}"></span>`);
   this.setPosition(top, left);
-  // this.ID = randomNumber();
-  // this.dancers = [];
+  //this.allDancerLocs = [];
   //
 };
 
@@ -18,6 +17,6 @@ Dancer.prototype.setPosition = function(top, left) {
     top: top,
     left: left
   };
-  //this.dancers.push(this.ID);
+  //this.allDancerLocs.push([top, left]);
   this.$node.css(styleSettings);
 };

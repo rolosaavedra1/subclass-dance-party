@@ -11,5 +11,9 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+  /*
+  //select all dancer objects, update their .allDancerLocs property to the latest one
+  document.querySelector('')
+   */
 });
 
