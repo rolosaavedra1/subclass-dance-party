@@ -3,7 +3,7 @@ var Dancer = function(top, left, timeBetweenSteps, className = 'dancer') {
   this.$node = $(`<span class="${className}"></span>`);
   this.setPosition(top, left);
   // this.ID = randomNumber();
-  // this.dancers = [];
+  // this.allDancers = [];
   //
 };
 
@@ -18,6 +18,6 @@ Dancer.prototype.setPosition = function(top, left) {
     top: top,
     left: left
   };
-  //this.dancers.push(this.ID);
+  //this.allDancers.push(this.ID);
   this.$node.css(styleSettings);
 };
