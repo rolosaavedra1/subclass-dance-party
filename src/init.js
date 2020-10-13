@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
   window.dancers = [];
   var dancerObjs = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function (event) {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
     var dancerMakerFunction = window[dancerMakerFunctionName];
     var dancer = new dancerMakerFunction(
@@ -21,7 +21,7 @@ $(document).ready(function() {
       const position = [rect.top, rect.left];
       positions.push(position);
     });
-    dancerObjs.forEach(function(dancer) {
+    dancerObjs.forEach(function (dancer) {
       if (dancer.minDistanceFromDancers) {
         for (var i = 0; i < positions.length; i++) {
           let distance = Math.sqrt(Math.pow(positions[i][0] - dancer.top, 2) + Math.pow(positions[i][1] - dancer.left, 2));
