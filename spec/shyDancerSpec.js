@@ -20,4 +20,4 @@ describe('shyDancer', function() {
   //it should move away when the cursor is set next to it
 
   //it should stay away from other dancers
-};
+});

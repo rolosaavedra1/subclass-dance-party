@@ -20,4 +20,4 @@ describe('creepyDancer', function() {
   //it should follow other dancers
 
   //it should stay away from other creepy dancers
-};
+});
