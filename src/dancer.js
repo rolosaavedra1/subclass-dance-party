@@ -4,7 +4,7 @@ var Dancer = function(top, left, timeBetweenSteps, className = 'dancer') {
   this.setPosition(top, left);
   // this.ID = randomNumber();
   // this.allDancers = [];
-  //
+  //this.allDancerLocs = [];
 };
 
 Dancer.prototype.step = function () {
@@ -19,5 +19,6 @@ Dancer.prototype.setPosition = function(top, left) {
     left: left
   };
   //this.allDancers.push(this.ID);
+  //this.allDancerLocs.push([top, left]);
   this.$node.css(styleSettings);
 };
