@@ -1,6 +1,5 @@
 var ShyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps, 'shyDancer');
-  this.timeBetweenSteps = timeBetweenSteps;
   this.$node.mouseover(() => {
     const top = $('body').height() * Math.random();
     const left = $('body').width() * Math.random();
@@ -14,7 +13,6 @@ ShyDancer.prototype = Object.create(Dancer.prototype);
 ShyDancer.prototype.constructor = ShyDancer;
 
 ShyDancer.prototype.step = function() {
-  // move on hover
   Dancer.prototype.step.call(this);
 };
 
