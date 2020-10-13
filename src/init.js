@@ -14,9 +14,7 @@ $(document).ready(function() {
     const dancers = [...document.querySelectorAll('span')];
     dancers.forEach(dancer => {
       const rect = dancer.getBoundingClientRect();
-      const top = rect.top;
-      const left = rect.left;
-      const position = [top, left];
+      const position = [rect.top, rect.left];
       positions.push(position);
     });
   });
