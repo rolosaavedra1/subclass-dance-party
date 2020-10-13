@@ -1,4 +1,5 @@
 var Dancer = function(top, left, timeBetweenSteps, className = 'dancer') {
+  // added className parameter to specify the class for each dancer
   this.$node = $(`<span class="${className}"></span>`);
   this.setPosition(top, left);
 };

@@ -9,5 +9,8 @@ BouncingDancer.prototype.constructor = BouncingDancer;
 
 BouncingDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
+  // toggles the bounce animation from styles.css
+  //https://api.jquery.com/toggleclass/
   this.$node.toggleClass('bounce');
+
 };
