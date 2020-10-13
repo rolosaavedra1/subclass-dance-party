@@ -6,6 +6,7 @@ document.querySelector('#lineUp').addEventListener('click', (e) => {
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
   // https://stackoverflow.com/questions/52128519/what-type-of-data-does-queryselectorall-return
   const dancers = [...document.querySelectorAll('span')];
+  console.log(document.querySelectorAll('span'));
   // gaps between dancers
   const gap = $('body').width() / dancers.length;
   // centers dancers

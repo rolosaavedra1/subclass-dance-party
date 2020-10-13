@@ -17,13 +17,7 @@ describe('shyDancer', function() {
     //expect(shyDancer.$node.[insert jquery method].called).to.be.true;
   });
 
-  //it should have a property "minDistanceFromCursor" indicating how much it should move when clicked
-  /*
-  it('it should have a property "minDistanceFromCursor" indicating how much it should move when clicked', function() {
-    expect(shyDancer.minDistanceFromCursor).to.be.true;
-  });
-
-  //it should have a property "minDistanceFromDancers"
+   //it should have a property "minDistanceFromDancers"
   it('it should have a property "minDistanceFromDancer" indicating how far it should remain from other dancer objects', function() {
     expect(shyDancer.minDistanceFromDancers).to.be.true;
   });
