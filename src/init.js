@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  var dancerObjs = [];
 
   $('.addDancerButton').on('click', function(event) {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
@@ -9,15 +10,28 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+    dancerObjs.push(dancer);
     $('body').append(dancer.$node);
     let positions = [];
-    const dancers = [...document.querySelectorAll('span')];
-    dancers.forEach(dancer => {
+    //create an array for all the dancers
+    const dancerElements = [...document.querySelectorAll('span')];
+    //store their positions in an array [[top1, left1], [top2, left2],...]
+    dancerElements.forEach(dancer => {
       const rect = dancer.getBoundingClientRect();
       const top = rect.top;
       const left = rect.left;
       const position = [top, left];
       positions.push(position);
+    });
+    dancerObjs.forEach(function(dancer){
+      if(dancer.minDistanceFromDancers){
+        for (var i = 0; i < positions.length; i++) {
+          let distance = Math.sqrt(Math.pow(positions[i][0] - dancer.top, 2) + Math.pow(positions[i][1] - dancer.left, 2));
+          if (distance < dancer.minDistanceFromDancers) {
+            dancer.step();
+          }
+        }
+      }
     });
   });
   /*

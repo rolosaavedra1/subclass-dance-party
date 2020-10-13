@@ -1,6 +1,6 @@
 var ShyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps, 'shyDancer');
-  this.minDistanceFromDancers = 20;
+  this.minDistanceFromDancers = 100;
   this.step();
 };
 
