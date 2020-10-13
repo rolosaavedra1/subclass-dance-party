@@ -19,7 +19,7 @@ ShyDancer.prototype.step = function() {
     Dancer.prototype.setPosition.call(this, top, left);
   });
   //if other dancers are too close (see init.js)
-  if (this.feelingOverwhelmed){
+  if (this.feelingOverwhelmed) {
     var top = $('body').height() * Math.random();
     var left = $('body').width() * Math.random();
     // called setPosition to put shy dancer at new random location
