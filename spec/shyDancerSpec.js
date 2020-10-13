@@ -11,13 +11,13 @@ describe('shyDancer', function () {
     expect(shyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node disappear when the cursor clicks on it', function () {
-    //sinon.spy(shyDancer.$node, [insert jquery method string]);
-    //shyDancer.step();
-    //expect(shyDancer.$node.[insert jquery method].called).to.be.true;
+  it('should have a function that makes its node disappear when the cursor hovers over it', function () {
+    sinon.spy(shyDancer.$node, 'mouseover');
+    shyDancer.step();
+    expect(shyDancer.$node.mouseover.called).to.be.true;
   });
 
   it('it should have a property "minDistanceFromDancer" indicating how far it should remain from other dancer objects', function () {
-    expect(shyDancer.minDistanceFromDancers).to.be.true;
+    expect(Boolean(shyDancer.minDistanceFromDancers)).to.be.true;
   });
 });
