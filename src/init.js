@@ -12,4 +12,4 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 });
-
+//iterate over objects, update their allDancers property to match the longest present
