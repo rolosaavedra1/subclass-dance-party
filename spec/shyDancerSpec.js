@@ -1,6 +1,6 @@
 describe('shyDancer', function () {
-  var shyDancer, clock;
-  var timeBetweenSteps = 100;
+  let shyDancer, clock;
+  let timeBetweenSteps = 100;
 
   beforeEach(function () {
     clock = sinon.useFakeTimers();
