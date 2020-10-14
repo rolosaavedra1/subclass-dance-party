@@ -1,6 +1,6 @@
 var BouncingDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps, 'bouncingDancer');
-  this.$node.prepend('<img id="boo" src="boo.gif" />');
+  this.$node.prepend('<img class="bouncer" id="boo" src="boo.gif" />');
   this.step();
 };
 
@@ -12,5 +12,5 @@ BouncingDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   // toggles the bounce animation from styles.css
   //https://api.jquery.com/toggleclass/
-  this.$node.toggleClass('bounce');
+  this.$node.toggleClass('smallerBouncer');
 };
